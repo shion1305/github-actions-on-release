@@ -1,0 +1,15 @@
+name: github-actions-on-release
+run-name: Running sample Github Actions by @${{ github.author }}
+on:
+  release:
+    types:
+      - released
+
+jobs:
+  sample-job:
+    name: Sample Job
+    run-on: ubuntu-latest
+    steps:
+      - name: echo hello
+        run: |
+          echo "hello world!"
